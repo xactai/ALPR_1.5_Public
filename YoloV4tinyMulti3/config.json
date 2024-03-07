@@ -1,0 +1,108 @@
+{
+    "VERSION": "1.1.0",
+
+    "STREAMS_NR":1,
+
+    "STREAM_1": {
+        "CAM_NAME": "Cam 1",
+        "MJPEG_PORT": 8091,
+        "VIDEO_INPUT": "video",
+        "VIDEO_INPUTS_PARAMS": {
+            "image": "./images/car.jpg",
+            "folder": "./inputs/images",
+            "video": "./Cars.mp4",
+            "usbcam": "v4l2src device=/dev/video0 ! video/x-raw(memory:NVMM),width=640, height=360, framerate=30/1 ! videoconvert ! appsink",
+            "CSI1": "nvarguscamerasrc sensor_id=0 ! video/x-raw(memory:NVMM),width=640, height=480, framerate=15/1, format=NV12 ! nvvidconv ! video/x-raw, format=BGRx, width=640, height=480 ! videoconvert ! video/x-raw, format=BGR ! appsink",
+            "CSI2": "nvarguscamerasrc sensor_id=1 ! video/x-raw(memory:NVMM),width=640, height=480, framerate=15/1, format=NV12 ! nvvidconv ! video/x-raw, format=BGRx, width=640, height=480 ! videoconvert ! video/x-raw, format=BGR ! appsink",
+            "CCTV": "rtsp://192.168.178.20:8554/test/",
+            "remote_hls_gstreamer": "souphttpsrc location=http://YOUR_HLSSTREAM_URL_HERE.m3u8 ! hlsdemux ! decodebin ! videoconvert ! videoscale ! appsink"
+        },
+        "DNN_Rect": {
+            "x_offset": 100,
+            "y_offset": 0,
+            "width":  1280,
+            "height": 1080
+        }
+    },
+
+    "STREAM_2": {
+        "CAM_NAME": "Cam 2",
+        "MJPEG_PORT": 8092,
+        "VIDEO_INPUT": "CCTV",
+        "VIDEO_INPUTS_PARAMS": {
+            "CCTV": "rtsp://192.168.178.26:8554/test/"
+        },
+        "DNN_Rect": {
+            "x_offset": 0,
+            "y_offset": 0,
+            "width":  640,
+            "height": 480
+        }
+    },
+
+    "STREAM_3": {
+        "CAM_NAME": "Cam 3",
+        "MJPEG_PORT": 8093,
+        "VIDEO_INPUT": "CCTV",
+        "VIDEO_INPUTS_PARAMS": {
+            "CCTV": "rtsp://192.168.178.20:8554/test/"
+        },
+        "DNN_Rect": {
+            "x_offset": 0,
+            "y_offset": 0,
+            "width":  640,
+            "height": 480
+        }
+    },
+
+    "STREAM_4": {
+        "CAM_NAME": "Cam 4",
+        "MJPEG_PORT": 8094,
+        "VIDEO_INPUT": "CCTV",
+        "VIDEO_INPUTS_PARAMS": {
+            "CCTV": "rtsp://192.168.178.26:8554/test/"
+        },
+        "DNN_Rect": {
+            "x_offset": 0,
+            "y_offset": 0,
+            "width":  640,
+            "height": 480
+        }
+    },
+
+    "WORK_WIDTH": 1920,
+    "WORK_HEIGHT": 1080,
+    "THUMB_WIDTH": 1280,
+    "THUMB_HEIGHT": 720,
+    "VEHICLE_MIN_WIDTH" : 0.18,
+    "VEHICLE_MIN_HEIGHT" : 0.15,
+
+    "MJPEG_PORT": 8090,
+
+    "VEHICLE_MODEL": "./models/vehicle-detection",
+    "LICENSE_MODEL": "./models/lp-detection-layout-classification",
+    "OCR_MODEL": "./models/lp-recognition",
+
+    "RoI": {
+        "x_offset": 0,
+        "y_offset": 0,
+        "width": 2280,
+        "height": 1080
+    },
+
+    "HEURISTIC_ON": false,
+
+    "PRINT_ON_CLI": false,
+    "PRINT_ON_RENDER": true,
+
+    "FoI_FOLDER": "none",
+    "VEHICLES_FOLDER": "none",
+    "PLATES_FOLDER": "none",
+    "JSONS_FOLDER": "./outputs/jsons",
+    "RENDERS_FOLDER": "none",
+
+    "HEURISTIC_ON": true,
+    "THRESHOLD_VERHICLE": 0.01,
+    "THRESHOLD_PLATE": 0.01,
+    "THRESHOLD_OCR": 0.5
+}

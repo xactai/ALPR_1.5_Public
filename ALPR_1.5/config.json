@@ -1,0 +1,133 @@
+{
+    "VERSION": "1.5.0",
+
+    "STREAMS_NR":1,
+
+    "STREAM_1": {
+        "CAM_NAME": "Cam Elephant",
+        "MJPEG_PORT": 0,
+        "MQTT_TOPIC": "parking",
+        "VIDEO_INPUT": "video",
+        "VIDEO_INPUTS_PARAMS": {
+            "image": "./images/car.jpg",
+			"folder": "./images",
+            "video": "./Nov_2min_30fps.mp4",
+            "VIGI": "rtsp://admin:L231C865@192.168.178.41:554/stream1",
+            "IMOU": "rtsp://admin:L239A796@192.168.178.39:554/cam/realmonitor?channel=1&subtype=0"
+        },
+        "DNN_Rect": {
+            "x_offset": 100,
+            "y_offset": 0,
+            "width":  1480,
+            "height": 1080
+        },
+        "BOI_Rect": {
+            "x_offset": 450,
+            "y_offset": 685,
+            "width":  550,
+            "height": 170,
+            "speed": 5.0
+        },
+        "SYNC": false,
+        "FPS": 15,
+        "LOOP": true,
+        "WARP": 4.4,
+        "GAIN": 1.5,
+        "PORTAL_WIDTH": 550,
+        "MIN_4_SEC": 0.5,
+        "MIN_2_SEC": 0.15,
+        "MIN_SIZE_PIC": 50000,
+        "TRIGGER": "wall",
+        "TRIGGER_WALL": {
+            "left": 0,
+            "top": 0,
+            "right":  1,
+            "bottom": 0
+        }
+    },
+
+    "STREAM_2": {
+        "CAM_NAME": "Cam 2",
+        "MJPEG_PORT": 0,
+        "MQTT_TOPIC": "parking",
+        "VIDEO_INPUT": "video",
+        "VIDEO_INPUTS_PARAMS": {
+            "image": "./images/car.jpg",
+			"folder": "./images",
+            "video": "./Nov_2min_30fps.mp4",
+            "VIGI": "rtsp://admin:L231C865@192.168.178.41:554/stream1",
+            "IMOU": "rtsp://admin:L239A796@192.168.178.39:554/cam/realmonitor?channel=1&subtype=0"
+        },
+        "DNN_Rect": {
+            "x_offset": 100,
+            "y_offset": 0,
+            "width":  1480,
+            "height": 1080
+        },
+        "BOI_Rect": {
+            "x_offset": 400,
+            "y_offset": 400,
+            "width":  200,
+            "height": 100,
+            "speed": 5.0
+        },
+        "SYNC": true,
+        "FPS" : 5,
+        "LOOP": true,
+        "WARP": 4.4,
+        "GAIN": 1.5,
+        "PORTAL_WIDTH": 250,
+        "MIN_4_SEC": 0.5,
+        "MIN_2_SEC": 0.15,
+        "MIN_SIZE_PIC": 500000,
+        "TRIGGER": "wall",
+        "TRIGGER_WALL": {
+            "left": 1,
+            "top": 0,
+            "right":  0,
+            "bottom": 0
+        }
+    },
+
+    "WORK_WIDTH": 1920,
+    "WORK_HEIGHT": 1080,
+    "THUMB_WIDTH": 960,
+    "THUMB_HEIGHT": 540,
+
+    "MIN_PERSON_SIZE": 5.0,
+    "MIN_4_SIZE": 12.5,
+    "MIN_2_SIZE": 1.5,
+
+    "INSPECT_TIME" : 4.50,
+    "INSPECT_DISTANCE" : 400,
+    "INSPECT_VELOCITY" : 3.5,
+
+    "MQTT_ON": true,
+    "JSON_PORT": 8070,
+    "MJPEG_PORT": 0,
+    "MJPEG_WIDTH": 960,
+    "MJPEG_HEIGHT": 540,
+    "PRINT_ON_CLI": false,
+    "PRINT_ON_RENDER": true,
+    "PRINT_PLATE": true,
+
+    "VEHICLE_MODEL": "./models/yolov4-tiny",
+    "LICENSE_MODEL": "./models/lp-detection-layout-classification",
+    "OCR_MODEL": "./models/lp-recognition",
+    "PORTAL_FILE": "./models/portal",
+
+    "NR_CHARS_PLATE" : 10,
+    "PLATE_RATIO": 1.75,
+    "PORTAL_FREEZE": 30,
+
+    "FoI_FOLDER": "none",
+    "VEHICLES_FOLDER": "none",
+    "PLATES_FOLDER": "none",
+    "JSONS_FOLDER": "none",
+    "RENDERS_FOLDER": "none",
+
+    "THRESHOLD_VERHICLE": 0.50,
+    "THRESHOLD_PLATE": 0.01,
+    "THRESHOLD_OCR": 0.5
+}
+

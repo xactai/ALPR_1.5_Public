@@ -1,0 +1,8 @@
+[Section1]
+CCTV1 = rtsp://192.168.178.20:8554/test/
+CCTV2 = rtsp://192.168.178.26:8554/test/
+CCTV3 = 10-Cars_1920_1080.mp4
+CCTV4 = 
+print_out = 0
+show_out = 1
+mjpeg_port = 8090

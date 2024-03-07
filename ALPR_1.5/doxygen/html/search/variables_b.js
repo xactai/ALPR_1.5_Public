@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['plate_0',['Plate',['../struct_t_license.html#a10c71fccc3fa2a0fa2e8ff16f6882c5a',1,'TLicense']]],
+  ['plate_5ffolder_1',['Plate_Folder',['../class_tjson.html#a82d5e934f9e28a3fa677dc5b27844f98',1,'Tjson']]],
+  ['platealbum_2',['PlateAlbum',['../class_t_mapper.html#a96ad93c41a0782b8d95c047d5ab6a013',1,'TMapper']]],
+  ['plateedge_3',['PlateEdge',['../struct_t_license.html#a619d0afaa51a01461ca20f0162be7d5b',1,'TLicense']]],
+  ['platefuzzy_4',['PlateFuzzy',['../struct_t_license.html#a3cc83230dbcf5c0c60dbc9093f03404f',1,'TLicense']]],
+  ['platename_5',['PlateName',['../struct_t_map_object.html#a5421efb610d0a6d39ece0dcf111f5fa1',1,'TMapObject']]],
+  ['platenrchars_6',['PlateNrChars',['../class_tjson.html#a0c886b4dd9fd52e51ae074c47d5ce3e9',1,'Tjson']]],
+  ['plateobjectid_7',['PlateObjectID',['../struct_t_license.html#a1df9817d47921033fdd4c6d16856611b',1,'TLicense']]],
+  ['plateocr_8',['PlateOCR',['../struct_t_map_object.html#a48d5fc046eff2d93e2505c88201b3510',1,'TMapObject::PlateOCR'],['../struct_t_license.html#a9d4ab4c5cac3739d9198075b70b9a8f5',1,'TLicense::PlateOCR']]],
+  ['plateplot_9',['PlatePlot',['../struct_t_map_object.html#a935ceda46b5995c7053ff9836384ace4',1,'TMapObject']]],
+  ['platepoll_10',['PlatePoll',['../struct_t_license.html#aab77b6c69a8c54cf279fac2232945f05',1,'TLicense']]],
+  ['platequality_11',['PlateQuality',['../struct_t_license.html#a00fceab301c1de8b80f8e2d1a8bed27c',1,'TLicense']]],
+  ['plateratio_12',['PlateRatio',['../class_tjson.html#a14d019ab12093c31b9cb115fc26a9447',1,'Tjson']]],
+  ['platetrackid_13',['PlateTrackID',['../struct_t_license.html#a81a462c39c4beefccabeb45a0fb57667',1,'TLicense']]],
+  ['portalfreeze_14',['PortalFreeze',['../class_tjson.html#ad9305804010000b6dc71f2962f737f85',1,'Tjson']]],
+  ['printoncli_15',['PrintOnCli',['../class_tjson.html#abcffa810840f58e8a8be629f5026d86a',1,'Tjson']]],
+  ['printonrender_16',['PrintOnRender',['../class_tjson.html#aa184bcff26418f6328960caf304b3c68',1,'Tjson']]],
+  ['printplate_17',['PrintPlate',['../class_tjson.html#ac119214b2099c8eb8ab73225bebe21eb',1,'Tjson']]],
+  ['pstr_18',['Pstr',['../class_tjson.html#ac596d34cc5ecf91a2f0ef95042f3359b',1,'Tjson']]]
+];

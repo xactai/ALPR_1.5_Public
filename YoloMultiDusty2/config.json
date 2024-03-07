@@ -1,0 +1,58 @@
+{
+    "VERSION": "1.1.0",
+
+    "STREAMS_NR":2,
+
+    "STREAM_1": {
+        "CAM_NAME": "Cam 1",
+        "VIDEO_INPUT": "CCTV",
+        "VIDEO_INPUTS_PARAMS": {
+            "image": "./images/car.jpg",
+            "folder": "./inputs/images",
+            "video": "./images/demo.mp4",
+            "usbcam": "v4l2src device=/dev/video0 ! video/x-raw(memory:NVMM),width=640, height=360, framerate=30/1 ! videoconvert ! appsink",
+            "CSI1": "nvarguscamerasrc sensor_id=0 ! video/x-raw(memory:NVMM),width=640, height=480, framerate=15/1, format=NV12 ! nvvidconv ! video/x-raw, format=BGRx, width=640, height=480 ! videoconvert ! video/x-raw, format=BGR ! appsink",
+            "CSI2": "nvarguscamerasrc sensor_id=1 ! video/x-raw(memory:NVMM),width=640, height=480, framerate=15/1, format=NV12 ! nvvidconv ! video/x-raw, format=BGRx, width=640, height=480 ! videoconvert ! video/x-raw, format=BGR ! appsink",
+            "CCTV": "rtsp://192.168.178.20:8554/test/",
+            "remote_hls_gstreamer": "souphttpsrc location=http://YOUR_HLSSTREAM_URL_HERE.m3u8 ! hlsdemux ! decodebin ! videoconvert ! videoscale ! appsink"
+        }
+    },
+
+    "STREAM_2": {
+        "CAM_NAME": "Cam 2",
+        "VIDEO_INPUT": "CCTV",
+        "VIDEO_INPUTS_PARAMS": {
+            "CCTV": "rtsp://192.168.178.26:8554/test/"
+        }
+    },
+
+    "STREAM_3": {
+        "CAM_NAME": "Cam 3",
+        "VIDEO_INPUT": "CCTV",
+        "VIDEO_INPUTS_PARAMS": {
+            "CCTV": "rtsp://192.168.178.25:8554/test/"
+        }
+    },
+
+    "STREAM_4": {
+        "CAM_NAME": "Cam 4",
+        "VIDEO_INPUT": "CCTV",
+        "VIDEO_INPUTS_PARAMS": {
+            "CCTV": "rtsp://192.168.178.36:8554/test/"
+        }
+    },
+
+    "WORK_WIDTH": 640,
+    "WORK_HEIGHT": 480,
+    "THUMB_WIDTH": 640,
+    "THUMB_HEIGHT": 480,
+
+    "MJPEG_PORT": 8090,
+
+    "DNN_Rect": {
+        "x_offset": 0,
+        "y_offset": 0,
+        "width":  640,
+        "height": 480
+    }
+}

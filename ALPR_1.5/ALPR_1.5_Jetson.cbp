@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ALPR_1.5 MultiCam" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/ALPR_1_5" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c17" />
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/ALPR_1_5" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="--verbose=4 --bird_view=false" />
+				<Compiler>
+					<Add option="-std=c17" />
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=gnu++17" />
+			<Add option="-fexceptions" />
+			<Add option="-pthread" />
+			<Add directory="/usr/include/opencv4" />
+			<Add directory="/usr/local/cuda/include" />
+			<Add directory="include/ByteTrack" />
+			<Add directory="/usr/include/eigen3" />
+		</Compiler>
+		<Linker>
+			<Add option="-O3" />
+			<Add option="`pkg-config --libs --cflags opencv4`" />
+			<Add option="-pthread" />
+			<Add option="-lpthread" />
+			<Add option="-lgflags" />
+			<Add option="-lstdc++fs" />
+			<Add library="/usr/lib/aarch64-linux-gnu/libavcodec.so" />
+			<Add library="/usr/lib/aarch64-linux-gnu/libavformat.so" />
+			<Add library="/usr/lib/aarch64-linux-gnu/libavutil.so" />
+			<Add library="/usr/lib/aarch64-linux-gnu/libswresample.so" />
+			<Add library="/usr/lib/aarch64-linux-gnu/libswscale.so" />
+			<Add library="/usr/local/lib/libdarknet.so" />
+			<Add library="/usr/local/lib/libpaho-mqtt3c.so" />
+			<Add library="/usr/local/lib/libpaho-mqtt3a.so" />
+			<Add library="/usr/local/cuda/lib64/libcudart.so" />
+			<Add directory="/usr/local/lib" />
+		</Linker>
+		<Unit filename="config.json" />
+		<Unit filename="include/ByteTrack/BYTETracker.h" />
+		<Unit filename="include/ByteTrack/STrack.h" />
+		<Unit filename="include/ByteTrack/dataType.h" />
+		<Unit filename="include/ByteTrack/kalmanFilter.h" />
+		<Unit filename="include/ByteTrack/lapjv.h" />
+		<Unit filename="include/FPS.h" />
+		<Unit filename="include/General.h" />
+		<Unit filename="include/Kmain.h" />
+		<Unit filename="include/Locate.h" />
+		<Unit filename="include/MJPG_sender.h" />
+		<Unit filename="include/MJPGthread.h" />
+		<Unit filename="include/MQTT.h" />
+		<Unit filename="include/Numbers.h" />
+		<Unit filename="include/ProcessPipe.h" />
+		<Unit filename="include/Regression.h" />
+		<Unit filename="include/TAlbum.h" />
+		<Unit filename="include/TFFmpeg.h" />
+		<Unit filename="include/TGstreamer.h" />
+		<Unit filename="include/TMapper.h" />
+		<Unit filename="include/TOCR.h" />
+		<Unit filename="include/TOstreamer.h" />
+		<Unit filename="include/TPortal.h" />
+		<Unit filename="include/ThreadCam.h" />
+		<Unit filename="include/TimeKeeper.h" />
+		<Unit filename="include/Tjson.h" />
+		<Unit filename="src/ByteTrack/BYTETracker.cpp" />
+		<Unit filename="src/ByteTrack/STrack.cpp" />
+		<Unit filename="src/ByteTrack/kalmanFilter.cpp" />
+		<Unit filename="src/ByteTrack/lapjv.cpp" />
+		<Unit filename="src/ByteTrack/utils.cpp" />
+		<Unit filename="src/FPS.cpp" />
+		<Unit filename="src/Kmain.cpp" />
+		<Unit filename="src/MJPG_sender.cpp" />
+		<Unit filename="src/MJPGthread.cpp" />
+		<Unit filename="src/MQTT.cpp" />
+		<Unit filename="src/ProcessPipe.cpp" />
+		<Unit filename="src/Regression.cpp" />
+		<Unit filename="src/TAlbum.cpp" />
+		<Unit filename="src/TFFmpeg.cpp" />
+		<Unit filename="src/TGstreamer.cpp" />
+		<Unit filename="src/TMapper.cpp" />
+		<Unit filename="src/TOCR.cpp" />
+		<Unit filename="src/TOstreamer.cpp" />
+		<Unit filename="src/TPortal.cpp" />
+		<Unit filename="src/ThreadCam.cpp" />
+		<Unit filename="src/TimeKeeper.cpp" />
+		<Unit filename="src/Tjson.cpp" />
+		<Unit filename="src/main.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
