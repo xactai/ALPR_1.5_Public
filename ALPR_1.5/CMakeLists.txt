@@ -19,7 +19,7 @@ set(SOURCES src/FPS.cpp src/main.cpp src/MJPG_sender.cpp src/MJPGthread.cpp src/
 
 set(EXTRA_LIBS ${OpenCV_LIBS} libdarknet.so libpaho-mqtt3c.so libpaho-mqtt3a.so /usr/local/cuda/lib64/libcudart.so)
 
-include_directories(include ${OpenCV_INCLUDE_DIRS} ./include ./include/ByteTrack /usr/local/include /usr/include/eigen3 )
+include_directories(include ${OpenCV_INCLUDE_DIRS} ./include ./include/ByteTrack /usr/local/include /usr/include/eigen3 /tmp/paho.mqtt.cpp/include )
 
 set(LINK_OPT -fopenmp -s -ldl -lpthread -pthread -O3 -lgomp -DNDEBUG -rdynamic -s)
 
